@@ -1,8 +1,20 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        FactorPrinter.printFactors(666);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        boolean hasNextInt = scanner.hasNextInt();
+        if (hasNextInt) {
+            int number = scanner.nextInt();
+            FactorPrinter.printFactors(number);
+        } else {
+            System.out.println("Invalid number");
+        }
+        scanner.nextLine();
+        scanner.close();
     }
 }
