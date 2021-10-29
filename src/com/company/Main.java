@@ -10,7 +10,8 @@ public class Main {
         boolean hasNextInt = scanner.hasNextInt();
         if (hasNextInt) {
             int number = scanner.nextInt();
-            FactorPrinter.printFactors(number);
+            FactorPrinter factorPrinter = new FactorPrinter(number);
+            factorPrinter.printFactors(number);
         } else {
             System.out.println("Invalid number");
         }

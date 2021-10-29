@@ -1,7 +1,13 @@
 package com.company;
 
 public class FactorPrinter {
-    public static void printFactors(int number) {
+    private int number;
+
+    public FactorPrinter(int number) {
+        this.number = number;
+    }
+
+    public void printFactors(int number) {
         if (number < 1) {
             System.out.println("Invalid Value");
         }
